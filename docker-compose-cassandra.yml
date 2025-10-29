@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  cassandra-db:
+    image: cassandra:latest
+    container_name: cassandra_app
+    ports:
+      - "9042:9042"
+    restart: unless-stopped
+    networks:
+      - cassandra-net
+
+networks:
+  cassandra-net:
+    driver: bridge

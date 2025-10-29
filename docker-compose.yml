@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  henrique-profile:
+    image: henriquefreitas/henrique-profile:latest
+    container_name: henrique-profile
+    ports:
+      - "80:80"   # map your app’s internal port to host
+    environment:
+      - NODE_ENV=production     # example environment variable
+      - TZ=Europe/Lisbon        # timezone
+    restart: unless-stopped
+    networks:
+      - henrique-net
+
+networks:
+  henrique-net:
+    driver: bridge
