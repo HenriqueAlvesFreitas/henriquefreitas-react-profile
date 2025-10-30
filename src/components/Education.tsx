@@ -49,7 +49,7 @@ export function Education() {
               <Card
                 className={`p-8 h-full border-gray-200 hover:shadow-xl transition-all duration-300 ${
                   edu.status === "current"
-                    ? "border-blue-500 bg-gradient-to-br from-teal-50 to-white"
+                    ? "border-blue-500 bg-gradient-to-br from-blue-50 to-white"
                     : "hover:border-blue-500"
                 }`}
               >

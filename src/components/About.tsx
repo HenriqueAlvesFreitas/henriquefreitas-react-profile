@@ -7,12 +7,12 @@ export function About() {
     {
       icon: Code2,
       title: "Clean Architecture",
-      description: "Expert in DDD and clean code principles",
+      description: "Good use of DDD and clean code principles",
     },
     {
       icon: Users,
-      title: "Team Leadership",
-      description: "Mentoring and guiding development teams",
+      title: "Teamwork",
+      description: "Mentoring and collaborating with development teams",
     },
     {
       icon: Lightbulb,
@@ -49,10 +49,10 @@ export function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-gray-700 mb-6 leading-relaxed">
-              Henrique is a Brazilian software engineer with over a <span className="text-blue-600">8 years of experience</span> building enterprise systems for financial and public-sector clients. His journey in software development has been marked by a relentless pursuit of excellence and innovation.
+              Henrique is a Brazilian software developer with over <span className="text-blue-600">3 years of experience</span> designing and building internal applications for various companies. He has progressed rapidly in his career thanks to <span className="text-blue-600">efficiency</span> and <span className="text-blue-600">strong teamwork</span>, focusing on improving productivity and optimizing business operations through unique, scalable, and high-quality software solutions.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              He is passionate about <span className="text-blue-600">software architecture</span>, clean code, and team leadership. With deep expertise in Domain-Driven Design (DDD), clean architecture patterns, and agile methodologies, Henrique transforms complex business requirements into elegant, scalable solutions.
+              Driven by a passion for <span className="text-blue-600">software development</span> and clean code, Henrique also has hands-on experience supporting development teams to establish coding standards and enhance collaboration. He enjoys working with agile methodologies and continuously seeks to deliver efficient, maintainable, and impactful software that drives real results.
             </p>
             <p className="text-gray-700 leading-relaxed">
               Currently pursuing an <span className="text-blue-600">MBA in Software Engineering</span> at FIAP, he continues to expand his knowledge and stay at the forefront of technology trends, always seeking to deliver value through quality software.

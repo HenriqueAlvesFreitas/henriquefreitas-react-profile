@@ -40,7 +40,7 @@ export function Navigation() {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
+          isScrolled || isMobileMenuOpen
             ? "bg-white/95 backdrop-blur-md shadow-lg"
             : "bg-transparent"
         }`}
@@ -56,7 +56,7 @@ export function Navigation() {
               }}
               whileHover={{ scale: 1.05 }}
               className={`transition-colors duration-300 ${
-                isScrolled ? "text-[#1a1a2e]" : "text-white"
+                isScrolled || isMobileMenuOpen ? "text-[#1a1a2e]" : "text-white"
               }`}
             >
               HF
@@ -74,7 +74,7 @@ export function Navigation() {
                     }}
                     whileHover={{ y: -2 }}
                     className={`transition-colors duration-300 ${
-                      isScrolled
+                      isScrolled 
                         ? "text-gray-700 hover:text-blue-600"
                         : "text-white hover:text-blue-500"
                     }`}
@@ -92,9 +92,15 @@ export function Navigation() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? (
-                <X className={isScrolled ? "text-[#1a1a2e]" : "text-white"} />
+                <X
+                  style={{width: '25px', height: '25px'}}
+                  className={`${isScrolled || isMobileMenuOpen ? "text-[#1a1a2e]" : "text-white"}`}
+                />
               ) : (
-                <Menu className={isScrolled ? "text-[#1a1a2e]" : "text-white"} />
+                <Menu
+                  style={{width: '25px', height: '25px'}}
+                  className={`${isScrolled ? "text-[#1a1a2e]" : "text-white"}`}
+                />
               )}
             </Button>
           </div>

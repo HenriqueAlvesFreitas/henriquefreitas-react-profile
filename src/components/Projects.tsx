@@ -16,6 +16,8 @@ import { ExternalLink, Apple, ShoppingBag,
   Boxes,       // Kubernetes
   Atom,        // React
   Cog,
+  Network,
+  ClipboardCheck,
  } from "lucide-react";
 
 
@@ -24,10 +26,10 @@ export function Projects() {
   
   const projects = [
   {
-    title: "PCL",
-    description: "MBA capstone project connecting nutritionists with healthy meal providers. Built a comprehensive platform enabling seamless communication, meal planning, and order management with real-time updates and personalized recommendations.",
-    icon: Apple,
-    color: "from-green-500 to-teal-500",
+    title: "PCL - Painel de Contratos e Locação",
+    description: "Microservices-based application designed to centralize and streamline essential operations for product registration and movement within the company. Integrating with the SAP ERP system, improving efficiency and ensuring data consistency across business processes.",
+    icon: Building2,
+    color: "from-orange-500 to-yellow-500",
     technologies: [
       { name: "React", icon: Atom },
       { name: "JavaScript", icon: Code2 },
@@ -46,11 +48,11 @@ export function Projects() {
     ],
   },
     {
-    title: "MCC",
+    title: "MCC - Mills Commerce Cloud",
     description:
-      "Architected and implemented a scalable microservice-based system integrating complex banking operations. Designed an event-driven architecture handling thousands of transactions daily with high availability and security compliance.",
-    icon: Building2,
-    color: "from-purple-500 to-pink-500",
+      "Architected and developed as a domain-driven application serving as the core platform for product and branch registration. Designed to centralize and expose product data across multiple systems, enabling seamless integration and consistency throughout the enterprise ecosystem.",
+    icon: Network,
+    color: "from-orange-500 to-yellow-500",
     technologies: [
       { name: "Java", icon: Code2 },
       { name: "Spring Boot", icon: Leaf },
@@ -65,16 +67,21 @@ export function Projects() {
   },
 
   {
-    title: "e-MCM",
+    title: "CME - Controle de Movimentação e Equipamentos",
     description:
-      "Led digital transformation initiative for a major retail business. Developed a modern e-commerce platform with inventory management, real-time order tracking, and integrated payment systems, resulting in a 40% increase in online sales.",
-    icon: ShoppingBag,
-    color: "from-blue-500 to-cyan-500",
+      "Led a digital transformation initiative to replace internal paper checklists. Developed a modern web dashboard and mobile app featuring survey creation, image annotation, and checklist management — delivering an easy and practical solution to eliminate paper use and embrace digital efficiency.",
+    icon: ClipboardCheck,
+    color: "from-orange-500 to-yellow-500",
     technologies: [
       { name: "React", icon: Atom },
+      { name: "React Native", icon: Atom },
       { name: "TypeScript", icon: Code2 },
-      { name: "SQLServer", icon: Database },
+      { name: "Java", icon: Code2 },
+      { name: "Spring Boot", icon: Leaf },
+      { name: "Postgres", icon: Database },
+      { name: "S3", icon: Database },
       { name: "Azure", icon: Cloud },
+      { name: "Kubernetes", icon: Boxes },
       { name: "Git", icon: GitBranch },
     ],
   },
