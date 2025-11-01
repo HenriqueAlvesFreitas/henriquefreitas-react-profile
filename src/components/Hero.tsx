@@ -2,7 +2,7 @@ import { ChevronDown, Download, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
 import cv from "../assets/cv-henrique-freitas.pdf";
-import profile from "../assets/profile_pic.jpg";
+import profile from "../assets/profile_pic.png";
 
 
 const handleDownloadCV = () => {
