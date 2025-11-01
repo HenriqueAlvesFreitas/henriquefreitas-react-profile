@@ -1,4 +1,4 @@
-import { Download, Mail } from "lucide-react";
+import { ChevronDown, Download, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
 import cv from "../assets/cv-henrique-freitas.pdf";
@@ -12,12 +12,23 @@ const handleDownloadCV = () => {
   link.click();
 };
 
+const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if(element){
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+};
+
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460]">
       {/* Animated background pattern */}
-      <div className="absolute inset-0 opacity-10">
+      {/* <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1759159347914-88541fa4bd14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRlY2glMjBwYXR0ZXJuJTIwYmx1ZXxlbnwxfHx8fDE3NjA0NDAwMjF8MA&ixlib=rb-4.1.0&q=80&w=1080')] bg-cover bg-center"></div>
+      </div> */}
+
+      <div className="absolute inset-0 opacity-10">
+        <div className={`absolute inset-0 md:bg-image bg-image-mobile bg-cover bg-center`}></div>
       </div>
       
       {/* Animated gradient orbs */}
@@ -135,15 +146,13 @@ export function Hero() {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
           <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
+            onClick={()=>{
+              scrollToSection('#about')
+            }}
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
           >
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-1.5 h-3 bg-white/50 rounded-full mt-2"
-            />
+            <ChevronDown className="text-white w-8 h-8 cursor-pointer" />
           </motion.div>
         </motion.div>
       </div>

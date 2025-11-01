@@ -54,7 +54,6 @@ export function Experience() {
         <div className="max-w-4xl mx-auto relative">
           {/* Timeline line */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-blue-200 transform -translate-x-1/2" />
-
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
@@ -62,42 +61,44 @@ export function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className={`mb-12 flex flex-col md:flex-row gap-6 items-center ${
+              className={`mb-12 flex flex-col-reverse md:flex-row gap-6 items-center ${
                 index % 2 === 0 ? "md:flex-row-reverse" : ""
               }`}
             >
               {/* Content */}
-         <div
-            className={`w-full md:w-[calc(50%-2rem)] ${
-              index % 2 === 0 ? "md:text-left" : "md:text-left"
-            }`}
-          >
-            <Card className="p-6 border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300">
-              <div className="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full mb-3">
-                {exp.period}
-              </div>
-              <h3 className="text-[#1a1a2e] mb-2">{exp.title}</h3>
-              <div className="text-blue-600 mb-3">{exp.company}</div>
-              <p className="text-gray-600 text-justify leading-relaxed">
-                {exp.description}
-              </p>
-            </Card>
-          </div>
-
-              {/* Timeline dot */}
-              <motion.a
-                whileHover={{ 
-                    scale: 1.05,
-                    transition: { delay: 0, duration: 0.3 },
-                }}
-                className="hidden md:flex w-16 h-16 bg-white border-2 border-blue-500 rounded-full items-center justify-center shadow-lg z-10 flex-shrink-0 overflow-hidden cursor-pointer relative group"
-                href={exp.link}
-                target="_blank"
+              <div
+                className={`w-full md:w-[calc(50%-2rem)] ${
+                  index % 2 === 0 ? "md:text-left" : "md:text-left"
+                }`}
               >
-                <img src={exp.icon} alt="Ícone da experiência" className="w-full h-full object-contain" />
-                <div className="absolute inset-0 bg-black/30 opacity-0 hover:opacity-100 transition-opacity"></div>
-              </motion.a >
-
+                <Card className="p-6 border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300">
+                  <div className="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full mb-3">
+                    {exp.period}
+                  </div>
+                  <h3 className="text-[#1a1a2e] mb-2">{exp.title}</h3>
+                  <div className="text-blue-600 mb-3">{exp.company}</div>
+                  <p className="text-gray-600 text-justify leading-relaxed">
+                    {exp.description}
+                  </p>
+                </Card>
+              </div>
+              
+              <div className="flex relative items-center justify-center w-full md:w-auto">
+                <div className="block md:hidden absolute bottom-0 w-full top-1/2 h-1 bg-blue-200 z-0"/>
+                {/* Timeline dot */}
+                <motion.a
+                  whileHover={{ 
+                      scale: 1.05,  
+                      transition: { delay: 0, duration: 0.3 },
+                  }}
+                  className="w-16 z-10 h-16 bg-white border-2 border-blue-500 rounded-full items-center justify-center shadow-lg z-10 flex-shrink-0 overflow-hidden cursor-pointer relative group"
+                  href={exp.link}
+                  target="_blank"
+                >
+                  <img src={exp.icon} alt="Ícone da experiência" className="w-full h-full object-contain" />
+                  <div className="absolute inset-0 bg-black/30 opacity-0 hover:opacity-100 transition-opacity"></div>
+                </motion.a >
+              </div>
               {/* Spacer */}
               <div className="hidden md:block w-[calc(50%-2rem)]" />
             </motion.div>
